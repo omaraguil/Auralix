@@ -6,14 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		07D265512FD5CF5100C1D497 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078B421D2FD5C4840041168E /* WidgetKit.framework */; };
+		07D265522FD5CF5100C1D497 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078B421F2FD5C4840041168E /* SwiftUI.framework */; };
+		07D2655F2FD5CF5300C1D497 /* AuralixWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 07D265502FD5CF5100C1D497 /* AuralixWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07D2655D2FD5CF5300C1D497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078B41DB2FD5AC660041168E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07D2654F2FD5CF5100C1D497;
+			remoteInfo = AuralixWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		078B42322FD5C4850041168E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				07D2655F2FD5CF5300C1D497 /* AuralixWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		078B41E32FD5AC660041168E /* Auralix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auralix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		078B421D2FD5C4840041168E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		078B421F2FD5C4840041168E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		07D265502FD5CF5100C1D497 /* AuralixWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AuralixWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		07D265672FD5CFA400C1D497 /* AuralixWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuralixWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		078B42102FD5AE820041168E /* Exceptions for "Auralix" folder in "Auralix" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 078B41E22FD5AC660041168E /* Auralix */;
+		};
+		07D265632FD5CF5300C1D497 /* Exceptions for "AuralixWidget" folder in "AuralixWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 07D2654F2FD5CF5100C1D497 /* AuralixWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		078B41E52FD5AC660041168E /* Auralix */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				078B42102FD5AE820041168E /* Exceptions for "Auralix" folder in "Auralix" target */,
+			);
 			path = Auralix;
+			sourceTree = "<group>";
+		};
+		07D265532FD5CF5100C1D497 /* AuralixWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				07D265632FD5CF5300C1D497 /* Exceptions for "AuralixWidget" folder in "AuralixWidgetExtension" target */,
+			);
+			path = AuralixWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +88,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07D2654D2FD5CF5100C1D497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07D265522FD5CF5100C1D497 /* SwiftUI.framework in Frameworks */,
+				07D265512FD5CF5100C1D497 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		078B41DA2FD5AC660041168E = {
 			isa = PBXGroup;
 			children = (
+				07D265672FD5CFA400C1D497 /* AuralixWidgetExtension.entitlements */,
 				078B41E52FD5AC660041168E /* Auralix */,
+				07D265532FD5CF5100C1D497 /* AuralixWidget */,
+				078B421C2FD5C4840041168E /* Frameworks */,
 				078B41E42FD5AC660041168E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +115,18 @@
 			isa = PBXGroup;
 			children = (
 				078B41E32FD5AC660041168E /* Auralix.app */,
+				07D265502FD5CF5100C1D497 /* AuralixWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		078B421C2FD5C4840041168E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				078B421D2FD5C4840041168E /* WidgetKit.framework */,
+				078B421F2FD5C4840041168E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +139,12 @@
 				078B41DF2FD5AC660041168E /* Sources */,
 				078B41E02FD5AC660041168E /* Frameworks */,
 				078B41E12FD5AC660041168E /* Resources */,
+				078B42322FD5C4850041168E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				07D2655E2FD5CF5300C1D497 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				078B41E52FD5AC660041168E /* Auralix */,
@@ -69,6 +155,28 @@
 			productName = Auralix;
 			productReference = 078B41E32FD5AC660041168E /* Auralix.app */;
 			productType = "com.apple.product-type.application";
+		};
+		07D2654F2FD5CF5100C1D497 /* AuralixWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07D265622FD5CF5300C1D497 /* Build configuration list for PBXNativeTarget "AuralixWidgetExtension" */;
+			buildPhases = (
+				07D2654C2FD5CF5100C1D497 /* Sources */,
+				07D2654D2FD5CF5100C1D497 /* Frameworks */,
+				07D2654E2FD5CF5100C1D497 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				07D265532FD5CF5100C1D497 /* AuralixWidget */,
+			);
+			name = AuralixWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = AuralixWidgetExtension;
+			productReference = 07D265502FD5CF5100C1D497 /* AuralixWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +189,9 @@
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					078B41E22FD5AC660041168E = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					07D2654F2FD5CF5100C1D497 = {
 						CreatedOnToolsVersion = 26.5;
 					};
 				};
@@ -100,12 +211,20 @@
 			projectRoot = "";
 			targets = (
 				078B41E22FD5AC660041168E /* Auralix */,
+				07D2654F2FD5CF5100C1D497 /* AuralixWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		078B41E12FD5AC660041168E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07D2654E2FD5CF5100C1D497 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +241,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07D2654C2FD5CF5100C1D497 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07D2655E2FD5CF5300C1D497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07D2654F2FD5CF5100C1D497 /* AuralixWidgetExtension */;
+			targetProxy = 07D2655D2FD5CF5300C1D497 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		078B41EC2FD5AC670041168E /* Debug */ = {
@@ -246,14 +380,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Auralix/Auralix.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q43CXQVPZ6;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Auralix/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -290,14 +437,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Auralix/Auralix.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q43CXQVPZ6;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Auralix/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -329,6 +489,73 @@
 			};
 			name = Release;
 		};
+		07D265602FD5CF5300C1D497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AuralixWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q43CXQVPZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AuralixWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuralixWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omaraguil.Auralix.AuralixWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07D265612FD5CF5300C1D497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AuralixWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q43CXQVPZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AuralixWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuralixWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omaraguil.Auralix.AuralixWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -346,6 +573,15 @@
 			buildConfigurations = (
 				078B41EF2FD5AC670041168E /* Debug */,
 				078B41F02FD5AC670041168E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07D265622FD5CF5300C1D497 /* Build configuration list for PBXNativeTarget "AuralixWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07D265602FD5CF5300C1D497 /* Debug */,
+				07D265612FD5CF5300C1D497 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
